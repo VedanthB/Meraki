@@ -20,6 +20,12 @@ a {
 }
 
 /* shared styles */
+input,
+select,
+textarea {
+  @apply rounded border p-2  outline-none ring-cyan-200  focus:ring;
+}
+
 .card {
   @apply mb-5  block   rounded-lg border border-gray-200  shadow-md;
 }

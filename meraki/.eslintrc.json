@@ -26,7 +26,16 @@
         "extensions": [".js", ".jsx"]
       }
     ],
-    "no-alert": ["off"]
+    "no-alert": ["off"],
+    "react/jsx-props-no-spreading": ["off"],
+    "react/button-has-type": [
+      "off",
+      {
+        "button": true,
+        "submit": true,
+        "reset": false
+      }
+    ]
   },
   "settings": {
     "react": {

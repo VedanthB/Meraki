@@ -14,7 +14,8 @@
     "js-cookie": "^3.0.1",
     "next": "12.3.0",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-hook-form": "^7.35.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.20",
