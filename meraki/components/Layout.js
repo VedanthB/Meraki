@@ -37,7 +37,7 @@ export default function Layout({ children }) {
 
         <main className="container m-auto mt-4 px-4">{children}</main>
 
-        <footer className="h-12 text-2xl flex gap-5 justify-center items-center shadow-inner mt-3">
+        <footer className="h-12 text-2xl flex gap-5 justify-center items-center shadow-inner mt-4">
           <a
             href="https://github.com/Ananyamadhu08"
             target="_blank"
