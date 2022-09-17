@@ -2,5 +2,6 @@
 import data from "./data";
 import { Store, StoreProvider } from "./Store";
 import db from "./db";
+import { getError } from "./error";
 
-export { data, Store, StoreProvider, db };
+export { data, Store, StoreProvider, db, getError };
