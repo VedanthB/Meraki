@@ -35,7 +35,20 @@
         "submit": true,
         "reset": false
       }
-    ]
+    ],
+    "no-underscore-dangle": [
+      "off",
+      {
+        "allow": ["__REDUX_DEVTOOLS_EXTENSION_COMPOSE__"],
+        "allowAfterThis": false,
+        "allowAfterSuper": false,
+        "allowAfterThisConstructor": false,
+        "enforceInMethodNames": true,
+        "allowFunctionParams": true
+      }
+    ],
+    "no-param-reassign": ["off"],
+    "no-nested-ternary": ["off"]
   },
   "settings": {
     "react": {
