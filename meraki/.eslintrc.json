@@ -48,7 +48,14 @@
       }
     ],
     "no-param-reassign": ["off"],
-    "no-nested-ternary": ["off"]
+    "no-nested-ternary": ["off"],
+    "prefer-const": [
+      "off",
+      {
+        "destructuring": "any",
+        "ignoreReadBeforeAssign": true
+      }
+    ]
   },
   "settings": {
     "react": {

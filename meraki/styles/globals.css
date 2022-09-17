@@ -33,3 +33,8 @@ textarea {
 .primary-button {
   @apply rounded bg-cyan-600 py-2 px-4 shadow outline-none hover:bg-cyan-700  active:bg-cyan-800;
 }
+
+/* nav */
+.dropdown-link {
+  @apply flex p-2 hover:bg-gray-200;
+}
