@@ -55,6 +55,12 @@
         "destructuring": "any",
         "ignoreReadBeforeAssign": true
       }
+    ],
+    "consistent-return": [
+      "off",
+      {
+        "treatUndefinedAsUnspecified": false
+      }
     ]
   },
   "settings": {

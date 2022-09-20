@@ -34,6 +34,10 @@ textarea {
   @apply rounded bg-cyan-600 py-2 px-4 shadow outline-none hover:bg-cyan-700  active:bg-cyan-800;
 }
 
+.default-button {
+  @apply rounded bg-gray-300 py-2 px-4 text-black shadow outline-none hover:bg-gray-400 active:bg-gray-500;
+}
+
 /* nav */
 .dropdown-link {
   @apply flex p-2 hover:bg-gray-200;
