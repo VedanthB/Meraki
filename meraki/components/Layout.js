@@ -39,7 +39,7 @@ export default function Layout({ children }) {
         />
       </Head>
 
-      <ToastContainer position="top-right" limit={1} />
+      <ToastContainer position="bottom-center" limit={1} />
 
       <div className="flex min-h-screen flex-col justify-between ">
         <header>
