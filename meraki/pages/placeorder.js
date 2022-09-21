@@ -102,7 +102,7 @@ export default function PlaceOrderScreen() {
               </div>
             </div>
 
-            <div className="card overflow-x-auto p-5">
+            <div className="card overflow-x-auto p-5 overflow-y-scroll max-h-96">
               <h2 className="mb-2 text-lg">Order Items</h2>
               <table className="min-w-full">
                 <thead className="border-b">
