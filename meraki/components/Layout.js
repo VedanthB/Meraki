@@ -13,7 +13,7 @@ import DropdownLink from "./DropdownLink";
 export default function Layout({ children }) {
   const { status, data: session } = useSession();
   const { state, dispatch } = useContext(Store);
-  const { cart } = state;
+  const { cart, darkMode } = state;
   const [cartItemsCount, setCartItemsCount] = useState(0);
   useEffect(() => {
     setCartItemsCount(cart.cartItems.reduce((a, c) => a + c.quantity, 0));
@@ -25,8 +25,20 @@ export default function Layout({ children }) {
     signOut({ callbackUrl: "/login" });
   };
 
+  const darkModeChangeHandler = () => {
+    dispatch({ type: darkMode ? "DARK_MODE_OFF" : "DARK_MODE_ON" });
+    const newDarkMode = !darkMode;
+    Cookies.set("darkMode", newDarkMode ? "ON" : "OFF");
+  };
+
   return (
-    <>
+    <div
+      className={`${
+        darkMode === true
+          ? "bg-white text-slate-900"
+          : "bg-slate-900 text-cyan-50"
+      }`}
+    >
       <Head>
         <title>Meraki</title>
         <meta name="description" content="An E-commerce application" />
@@ -41,18 +53,25 @@ export default function Layout({ children }) {
 
       <ToastContainer position="bottom-center" limit={1} />
 
-      <div className="flex min-h-screen flex-col justify-between ">
+      <div className="flex min-h-screen flex-col justify-between">
         <header>
-          <nav className="flex h-14 items-center px-4 justify-between shadow-md">
+          <nav className="flex h-14 items-center px-4 justify-between shadow-md bg-cyan-800 text-white">
             <Link href="/">
               <a className="text-lg font-bold">Meraki</a>
             </Link>
-            <div>
+            <div className="flex items-center text-lg gap-5">
+              <button onClick={darkModeChangeHandler}>
+                {darkMode === true ? (
+                  <i className="fa-solid fa-moon text-xl" />
+                ) : (
+                  <i className="fa-solid fa-sun text-xl" />
+                )}
+              </button>
               <Link href="/cart">
-                <a className="p-2">
+                <a className="flex items-center">
                   Cart
                   {cartItemsCount > 0 && (
-                    <span className="ml-1 rounded-full bg-cyan-600 px-2 py-1 text-xs font-bold text-white">
+                    <span className="ml-1 rounded-full bg-cyan-600 py-1 px-2 text-xs font-bold text-white">
                       {cartItemsCount}
                     </span>
                   )}
@@ -65,7 +84,7 @@ export default function Layout({ children }) {
                 <Menu as="div" className="relative inline-block">
                   <Menu.Button>{session.user.name}</Menu.Button>
 
-                  <Menu.Items className="absolute right-0 w-56 origin-top-right shadow-lg bg-white">
+                  <Menu.Items className="absolute right-0 w-56 origin-top-right shadow-lg bg-cyan-700">
                     <Menu.Item>
                       <DropdownLink className="dropdown-link" href="/profile">
                         Profile
@@ -92,7 +111,7 @@ export default function Layout({ children }) {
                 </Menu>
               ) : (
                 <Link href="/login">
-                  <a className="p-2">Login</a>
+                  <a>Login</a>
                 </Link>
               )}
             </div>
@@ -101,7 +120,7 @@ export default function Layout({ children }) {
 
         <main className="container m-auto mt-4 px-4">{children}</main>
 
-        <footer className="h-12 text-2xl flex gap-5 justify-center items-center shadow-inner mt-4">
+        <footer className="h-12 text-2xl flex gap-5 justify-center items-center shadow-inner mt-4 bg-cyan-800 text-white">
           <a
             href="https://github.com/Ananyamadhu08"
             target="_blank"
@@ -125,6 +144,6 @@ export default function Layout({ children }) {
           </a>
         </footer>
       </div>
-    </>
+    </div>
   );
 }
