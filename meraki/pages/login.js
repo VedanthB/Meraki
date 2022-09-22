@@ -43,7 +43,7 @@ export default function LoginScreen() {
   return (
     <Layout title="Login">
       <form
-        className="mx-auto max-w-screen-md card p-5 bg-cyan-50"
+        className="mx-auto max-w-screen-md card p-5 bg-cyan-50 text-slate-900"
         onSubmit={handleSubmit(submitHandler)}
       >
         <h1 className="mb-4 text-xl">Login</h1>

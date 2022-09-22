@@ -5,7 +5,7 @@ import React from "react";
 
 export default function ProductItem({ product, addToCartHandler }) {
   return (
-    <div className="card bg-cyan-50 mt-4">
+    <div className="card bg-cyan-50 mt-4 text-slate-900">
       <Link href={`/product/${product.slug}`}>
         <a>
           <img

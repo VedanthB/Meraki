@@ -64,7 +64,7 @@ export default function ProductScreen(props) {
             </ul>
           </div>
           <div>
-            <div className="card p-5 w-96 bg-cyan-50">
+            <div className="card p-5 w-96 bg-cyan-50 text-slate-900">
               <div className="mb-1 flex justify-between">
                 <div>Price: Rs.{product.price}</div>
               </div>

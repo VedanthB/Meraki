@@ -13,6 +13,7 @@ function CartScreen() {
   const router = useRouter();
   const { state, dispatch } = useContext(Store);
   const {
+    darkMode,
     cart: { cartItems },
   } = state;
 
@@ -71,6 +72,9 @@ function CartScreen() {
                         onChange={(e) =>
                           updateCartHandler(item, e.target.value)
                         }
+                        className={`${
+                          darkMode === true ? "bg-white" : "bg-slate-900"
+                        }`}
                       >
                         {[...Array(item.countInStock).keys()].map((x) => (
                           <option key={x + 1} value={x + 1}>
@@ -93,7 +97,7 @@ function CartScreen() {
               </tbody>
             </table>
           </div>
-          <div className="card p-5 h-max bg-cyan-50">
+          <div className="card p-5 h-max bg-cyan-50 text-slate-900">
             <ul>
               <li>
                 <div className="text-xl mb-1">

@@ -61,7 +61,7 @@ export default function ShippingScreen() {
         <div className="mb-4">
           <label htmlFor="fullName">Full Name</label>
           <input
-            className="w-full"
+            className="w-full text-slate-900"
             id="fullName"
             autoFocus
             {...register("fullName", {
@@ -75,7 +75,7 @@ export default function ShippingScreen() {
         <div className="mb-4">
           <label htmlFor="address">Address</label>
           <input
-            className="w-full"
+            className="w-full text-slate-900"
             id="address"
             autoFocus
             {...register("address", {
@@ -93,7 +93,7 @@ export default function ShippingScreen() {
         <div className="mb-4">
           <label htmlFor="city">City</label>
           <input
-            className="w-full"
+            className="w-full text-slate-900"
             id="city"
             autoFocus
             {...register("city", {
@@ -107,7 +107,7 @@ export default function ShippingScreen() {
         <div className="mb-4">
           <label htmlFor="postalCode">Postal Code</label>
           <input
-            className="w-full"
+            className="w-full text-slate-900"
             id="postalCode"
             autoFocus
             {...register("postalCode", {
@@ -121,7 +121,7 @@ export default function ShippingScreen() {
         <div className="mb-7">
           <label htmlFor="country">Country</label>
           <input
-            className="w-full"
+            className="w-full text-slate-900"
             id="country"
             autoFocus
             {...register("country", {
