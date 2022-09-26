@@ -138,7 +138,7 @@ function OrderScreen() {
       ) : (
         <div className="grid md:grid-cols-4 md:gap-5">
           <div className="overflow-x-auto md:col-span-3">
-            <div className="card p-5">
+            <div className="card p-5  bg-cyan-50 text-slate-900">
               <h2 className="mb-2 text-lg">Shipping Address</h2>
               <div>
                 {shippingAddress.fullName}, {shippingAddress.address},{" "}
@@ -152,7 +152,7 @@ function OrderScreen() {
               )}
             </div>
 
-            <div className="card p-5">
+            <div className="card p-5 bg-cyan-50 text-slate-900">
               <h2 className="mb-2 text-lg">Payment Method</h2>
               <div>{paymentMethod}</div>
               {isPaid ? (
@@ -162,7 +162,7 @@ function OrderScreen() {
               )}
             </div>
 
-            <div className="card overflow-x-auto p-5  overflow-y-scroll max-h-96">
+            <div className="card overflow-x-auto p-5  overflow-y-scroll max-h-96 bg-cyan-50 text-slate-900">
               <h2 className="mb-2 text-lg">Order Items</h2>
               <table className="min-w-full">
                 <thead className="border-b">
@@ -202,7 +202,7 @@ function OrderScreen() {
             </div>
           </div>
           <div>
-            <div className="card p-5">
+            <div className="card p-5 bg-cyan-50 text-slate-900">
               <h2 className="mb-2 text-lg">Order Summary</h2>
               <ul>
                 <li>
@@ -225,7 +225,7 @@ function OrderScreen() {
                   </div>
                 </li>
                 <li>
-                  <div className="mb-2 flex justify-between">
+                  <div className="mb-6 flex justify-between">
                     <div>Total:</div>
                     <div>Rs.{totalPrice}</div>
                   </div>
