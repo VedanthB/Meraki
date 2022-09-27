@@ -55,7 +55,7 @@ export default function Layout({ children }) {
 
       <div className="flex min-h-screen flex-col justify-between">
         <header>
-          <nav className="flex h-14 items-center px-4 justify-between shadow-md bg-cyan-800 text-white">
+          <nav className="fixed w-full flex h-14 items-center px-4 justify-between shadow-md bg-cyan-800 text-white">
             <Link href="/">
               <a className="text-lg font-bold">Meraki</a>
             </Link>
@@ -118,7 +118,7 @@ export default function Layout({ children }) {
           </nav>
         </header>
 
-        <main className="container m-auto mt-4 px-4">{children}</main>
+        <main className="container m-auto mt-20 px-4">{children}</main>
 
         <footer className="h-12 text-2xl flex gap-5 justify-center items-center shadow-inner mt-4 bg-cyan-800 text-white">
           <a
