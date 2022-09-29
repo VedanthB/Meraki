@@ -61,6 +61,14 @@
       {
         "treatUndefinedAsUnspecified": false
       }
+    ],
+    "no-unused-expressions": [
+      "off",
+      {
+        "allowShortCircuit": false,
+        "allowTernary": false,
+        "allowTaggedTemplates": false
+      }
     ]
   },
   "settings": {

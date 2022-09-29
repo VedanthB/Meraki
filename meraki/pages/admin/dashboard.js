@@ -1,5 +1,4 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-/* eslint-disable no-unused-expressions */
 import React, { useEffect, useReducer } from "react";
 import axios from "axios";
 import Link from "next/link";
