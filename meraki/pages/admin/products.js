@@ -90,9 +90,9 @@ export default function AdminProdcutsScreen() {
                         {product.countInStock}
                       </td>
                       <td className="p-5 text-center">{product.rating}</td>
-                      <td className="p-5">
+                      <td className="p-5 text-cyan-500">
                         <Link href={`/admin/product/${product._id}`}>Edit</Link>
-                        <button className="text-cyan-500 ml-6">Delete</button>
+                        <button className="ml-6">Delete</button>
                       </td>
                     </tr>
                   ))}
