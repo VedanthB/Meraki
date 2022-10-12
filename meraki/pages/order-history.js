@@ -43,7 +43,7 @@ function orderHistoryScreen() {
       <h1>Order History</h1>
 
       {loading ? (
-        <div>Loading...</div>
+        <div>Loading..</div>
       ) : error ? (
         <div className="alert-error">{error}</div>
       ) : (
