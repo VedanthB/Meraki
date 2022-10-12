@@ -42,13 +42,13 @@ export default function Layout({ children }) {
       <Head>
         <title>Meraki</title>
         <meta name="description" content="An E-commerce application" />
-        <link
+        {/* <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
           integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
           crossOrigin="anonymous"
           referrerPolicy="no-referrer"
-        />
+        /> */}
       </Head>
 
       <ToastContainer position="bottom-center" limit={1} />
